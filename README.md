@@ -1,4 +1,4 @@
-# vue-docs-demo
+# init
 
 ## Project setup
 ```

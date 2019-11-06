@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>获取门禁卡授权状态 | Hello VuePress</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/doc/assets/css/0.styles.548aeea3.css" as="style"><link rel="preload" href="/doc/assets/js/app.ed3d61d9.js" as="script"><link rel="preload" href="/doc/assets/js/2.35660955.js" as="script"><link rel="preload" href="/doc/assets/js/3.eb534df9.js" as="script"><link rel="preload" href="/doc/assets/js/7.069fe9dd.js" as="script"><link rel="prefetch" href="/doc/assets/js/4.517d3a8a.js"><link rel="prefetch" href="/doc/assets/js/5.9361527f.js"><link rel="prefetch" href="/doc/assets/js/6.ce704529.js"><link rel="prefetch" href="/doc/assets/js/8.1c9e0161.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.548aeea3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>鉴权</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/doc/鉴权/鉴权.html" class="active sidebar-link">鉴权</a></li></ul></section></li><li><a href="/doc/例子.html" class="sidebar-link">例子</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="获取门禁卡授权状态"><a href="#获取门禁卡授权状态" class="header-anchor">#</a> 获取门禁卡授权状态</h1> <h2 id="简要描述"><a href="#简要描述" class="header-anchor">#</a> 简要描述</h2> <p>查询门禁卡授权状态</p> <h2 id="请求地址"><a href="#请求地址" class="header-anchor">#</a> 请求地址</h2> <table><thead><tr><th style="text-align:left;">url</th> <th style="text-align:left;">http://open.heydayscape.com/api/acs/card/authList</th></tr></thead> <tbody><tr><td style="text-align:left;">协议</td> <td style="text-align:left;">http</td></tr> <tr><td style="text-align:left;">请求方式</td> <td style="text-align:left;">GET，application/json</td></tr> <tr><td style="text-align:left;">headers</td> <td style="text-align:left;">accessToken</td></tr></tbody></table> <h2 id="请求参数"><a href="#请求参数" class="header-anchor">#</a> 请求参数</h2> <table><thead><tr><th style="text-align:left;">参数名称</th> <th style="text-align:left;">是否必须</th> <th style="text-align:left;">类型</th> <th style="text-align:left;">描述</th></tr></thead> <tbody><tr><td style="text-align:left;">villageCode</td> <td style="text-align:left;">必须</td> <td style="text-align:left;">String</td> <td style="text-align:left;">小区唯一标识</td></tr> <tr><td style="text-align:left;">page</td> <td style="text-align:left;">必须</td> <td style="text-align:left;">String</td> <td style="text-align:left;">页码，从1开始</td></tr> <tr><td style="text-align:left;">limit</td> <td style="text-align:left;">必须</td> <td style="text-align:left;">String</td> <td style="text-align:left;">每页显示数</td></tr> <tr><td style="text-align:left;">peopleName</td> <td style="text-align:left;">必须</td> <td style="text-align:left;">String</td> <td style="text-align:left;">人员姓名</td></tr></tbody></table> <h2 id="返回数据"><a href="#返回数据" class="header-anchor">#</a> 返回数据</h2> <table><thead><tr><th style="text-align:left;">参数名称</th> <th style="text-align:left;">类型</th> <th style="text-align:left;">描述</th></tr></thead> <tbody><tr><td style="text-align:left;">code</td> <td style="text-align:left;">int</td> <td style="text-align:left;">状态码0成功;500错误</td></tr> <tr><td style="text-align:left;">msg</td> <td style="text-align:left;">String</td> <td style="text-align:left;">信息描述</td></tr> <tr><td style="text-align:left;">data</td> <td style="text-align:left;">json</td> <td style="text-align:left;">业务数据</td></tr> <tr><td style="text-align:left;">currPage</td> <td style="text-align:left;">int</td> <td style="text-align:left;">当前页码</td></tr> <tr><td style="text-align:left;">pageSize</td> <td style="text-align:left;">int</td> <td style="text-align:left;">每页行数</td></tr> <tr><td style="text-align:left;">totalCount</td> <td style="text-align:left;">int</td> <td style="text-align:left;">总行数</td></tr> <tr><td style="text-align:left;">totalPage</td> <td style="text-align:left;">int</td> <td style="text-align:left;">总页数</td></tr> <tr><td style="text-align:left;">list</td> <td style="text-align:left;">json</td> <td style="text-align:left;">列表数据</td></tr> <tr><td style="text-align:left;">authId</td> <td style="text-align:left;">long</td> <td style="text-align:left;">授权记录id</td></tr> <tr><td style="text-align:left;">peopleId</td> <td style="text-align:left;">long</td> <td style="text-align:left;">人员id</td></tr> <tr><td style="text-align:left;">idCode</td> <td style="text-align:left;">String</td> <td style="text-align:left;">身份证号</td></tr> <tr><td style="text-align:left;">mobile</td> <td style="text-align:left;">String</td> <td style="text-align:left;">手机号</td></tr> <tr><td style="text-align:left;">address</td> <td style="text-align:left;">String</td> <td style="text-align:left;">授权地址（小区，楼栋，单元，房间）</td></tr> <tr><td style="text-align:left;">realName</td> <td style="text-align:left;">String</td> <td style="text-align:left;">真实姓名</td></tr> <tr><td style="text-align:left;">type</td> <td style="text-align:left;">int</td> <td style="text-align:left;">授权用户类型：1租客2业主3家属 9访客 10职工 11设备管理员 0未标记类型</td></tr> <tr><td style="text-align:left;">startTime</td> <td style="text-align:left;">String</td> <td style="text-align:left;">开始时间</td></tr> <tr><td style="text-align:left;">endTime</td> <td style="text-align:left;">String</td> <td style="text-align:left;">结束时间</td></tr> <tr><td style="text-align:left;">createDate</td> <td style="text-align:left;">String</td> <td style="text-align:left;">创建时间</td></tr> <tr><td style="text-align:left;">editDate</td> <td style="text-align:left;">String</td> <td style="text-align:left;">编辑时间</td></tr> <tr><td style="text-align:left;">status</td> <td style="text-align:left;">int</td> <td style="text-align:left;">授权状态0未授权1已授权2授权过期3授权注销4挂失</td></tr> <tr><td style="text-align:left;">devKey</td> <td style="text-align:left;">String</td> <td style="text-align:left;">设备序列号</td></tr> <tr><td style="text-align:left;">devName</td> <td style="text-align:left;">String</td> <td style="text-align:left;">设备名称</td></tr></tbody></table> <h2 id="返回数据实例"><a href="#返回数据实例" class="header-anchor">#</a> 返回数据实例</h2> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;code&quot;: 0,
+    &quot;data&quot;: {
+        &quot;currPage&quot;: 1,
+        &quot;list&quot;: [
+            {
+                &quot;address&quot;: &quot;大门机&quot;,
+                &quot;authId&quot;: 1,
+                &quot;createDate&quot;: &quot;2019-08-09 14:14:12&quot;,
+                &quot;devKey&quot;: &quot;84E0F4224927C07A&quot;,
+                &quot;devName&quot;: &quot;大门机&quot;,
+                &quot;editDate&quot;: &quot;2019-08-09 14:14:12&quot;,
+                &quot;endTime&quot;: &quot;2019-08-09 14:14:12&quot;,
+                &quot;idCode&quot;: &quot;41071119000718571X&quot;,
+                &quot;mobile&quot;: &quot;17611111111&quot;,
+                &quot;peopleId&quot;: 1,
+                &quot;realName&quot;: &quot;马小跳&quot;,
+                &quot;startTime&quot;: &quot;2029-08-09 14:14:12&quot;,
+                &quot;status&quot;: 1,
+                &quot;type&quot;: 1
+            }
+        ],
+        &quot;pageSize&quot;: 10,
+        &quot;totalCount&quot;: 1,
+        &quot;totalPage&quot;: 1
+    },
+    &quot;msg&quot;: &quot;success&quot;
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/doc/例子.html">例子</a>→
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.ed3d61d9.js" defer></script><script src="/doc/assets/js/2.35660955.js" defer></script><script src="/doc/assets/js/3.eb534df9.js" defer></script><script src="/doc/assets/js/7.069fe9dd.js" defer></script>
+  </body>
+</html>
