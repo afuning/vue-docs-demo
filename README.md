@@ -1,16 +1,21 @@
-# init
+# vue&vuepress
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## 开发环境构建
 ```
+// 主项目构建
+// 如果文档有更新则先执行
+# node ./script/build-doc
 npm run serve
+// doc项目构建
+npm run serve:doc
 ```
 
-### Compiles and minifies for production
+## 生产环境 
 ```
 npm run build
 ```
@@ -19,6 +24,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
